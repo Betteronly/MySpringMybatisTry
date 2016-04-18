@@ -4,9 +4,9 @@
 
 <configuration>
   <!-- 别名 -->
-<!--   <typeAliases>
-    <typeAlias alias="User" type="test.test.mybatistest.User" />
-  </typeAliases> -->
+  <typeAliases>
+    <typeAlias alias="User" type="mine.test.mybatis.domain.User" />
+  </typeAliases>
 
   <environments default="development">
     <environment id="development">

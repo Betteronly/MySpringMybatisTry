@@ -17,9 +17,12 @@
   <!--
     根据id查询得到一个user对象
   -->
-  <select id="getUser" parameterType="int" resultType="mine.test.mybatis.domain.User">
+  <!-- <select id="getUser" parameterType="int" resultType="mine.test.mybatis.domain.User" useCache="false"> -->
+  <!-- 可用别名简写 -->
+  <select id="getUser" parameterType="int" resultType="User" useCache="false" >
+    <![CDATA[ 
     select * from user where id=#{id}
+    ]]>
   </select>
-  
-</mapper>
 
+</mapper>
