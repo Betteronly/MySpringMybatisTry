@@ -13,26 +13,26 @@
     <finalName>test</finalName>
     这样也可以把所有的xml文件，打包到相应位置。
     <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <includes>
-          <include>**/*.properties</include>
-          <include>**/*.xml</include>
-          <include>**/*.tld</include>
-        </includes>
-        <filtering>false</filtering>
-      </resource>
-      <resource>
-        <directory>src/main/java</directory>
-        <includes>
-          <include>**/*.properties</include>
-          <include>**/*.xml</include>
-          <include>**/*.tld</include>
-        </includes>
-        <filtering>false</filtering>
-      </resource>
+    <resource>
+    <directory>src/main/resources</directory>
+    <includes>
+    <include>**/*.properties</include>
+    <include>**/*.xml</include>
+    <include>**/*.tld</include>
+    </includes>
+    <filtering>false</filtering>
+    </resource>
+    <resource>
+    <directory>src/main/java</directory>
+    <includes>
+    <include>**/*.properties</include>
+    <include>**/*.xml</include>
+    <include>**/*.tld</include>
+    </includes>
+    <filtering>false</filtering>
+    </resource>
     </resources>
-  </build> -->
+    </build> -->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -41,6 +41,8 @@
     <slf4j.api.version>1.7.5</slf4j.api.version>
     <testng.version>6.8.7</testng.version>
     <spring-context.version>4.3.0.RC1</spring-context.version>
+    <dbcp.version>1.4</dbcp.version>
+    <spring.version>3.1.2.RELEASE</spring.version>
   </properties>
 
   <dependencies>
@@ -56,21 +58,39 @@
       <version>${mybatis.version}</version>
     </dependency>
 
-    <!-- Database driver  -->
+    <dependency><!-- spring上下文用spring-jdbc连接数据库 -->
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency><!-- dataSource是BasicDataSource的实例 -->
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>${dbcp.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <!-- Database driver -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>${mysql.version}</version>
     </dependency>
 
-    <!-- mybatis启动要加载log4j  -->
+    <!-- mybatis启动要加载log4j -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>${slf4j.api.version}</version>
     </dependency>
 
-    <!-- Test  -->
+    <!-- Test -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>

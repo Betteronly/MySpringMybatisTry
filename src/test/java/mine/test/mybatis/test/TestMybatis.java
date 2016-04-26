@@ -12,13 +12,12 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.testng.log4testng.Logger;
 
 import mine.test.mybatis.domain.User;
 
 public class TestMybatis {
-    private static Logger log = LoggerFactory.getLogger(TestMybatis.class);
+    private static Logger log = Logger.getLogger(TestMybatis.class);
     private static SqlSessionFactory sqlSessionFactory;
 
     // Main主方法来启动测试
@@ -30,6 +29,7 @@ public class TestMybatis {
         testMybatis.testMybatisNoSpringB();
         testMybatis.testMybatisNoSpringIF();
         testMybatis.testMybatisWithSpring();
+
     }
 
     public void testMainA() {

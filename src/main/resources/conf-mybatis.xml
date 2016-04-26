@@ -26,6 +26,7 @@
     <!-- 注册userMapper.xml文件， 
     userMapper.xml位于me.gacl.mapping这个包下，所以resource写成me/gacl/mapping/userMapper.xml-->
     <mapper resource="mine/test/mybatis/mapping/UserMapper.xml"/>
+    <mapper resource="mine/test/mybatis/mapping/UserMapperIF.xml"/>
   </mappers>
   
 </configuration>  
