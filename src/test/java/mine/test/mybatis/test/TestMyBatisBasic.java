@@ -59,7 +59,5 @@ public class TestMyBatisBasic {
         User user = mapper.getUserById(1);
         // log.info("{}: {}", user.getName(), user.getAddress());
         log.info("{}: {}" + user.getName() + user.getAddress());
-
     }
-
 }
