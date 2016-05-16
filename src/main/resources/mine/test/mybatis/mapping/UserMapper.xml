@@ -17,7 +17,7 @@
   -->
   <!-- <select id="getUser" parameterType="int" resultType="mine.test.mybatis.domain.User" useCache="false"> -->
   <!-- 可用别名简写 -->
-  <select id="getUserById" parameterType="int" resultType="User" useCache="false" >
+  <select id="getUserById" parameterType="int" resultType="User" useCache="false">
     select * from user where id=#{id}
   </select>
 </mapper>
